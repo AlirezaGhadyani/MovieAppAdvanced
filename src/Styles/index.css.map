@@ -5,7 +5,8 @@
         "index.scss",
         "_Fonts.scss",
         "_FlexBox.scss",
-        "_Colors.scss"
+        "_Colors.scss",
+        "_TrendingPage.scss"
     ],
     "names": [],
     "file": "index.css"

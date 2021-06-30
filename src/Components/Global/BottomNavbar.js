@@ -10,25 +10,25 @@ const BottomNavbar = () => {
             <ul className="navbar-nav">
                 <li className="nav-item">
                     <Link to="/" className="nav-btn">
-                        <Link className="nav-link">داغ ترین ها</Link>
+                        <span className="nav-link">داغ ترین ها</span>
                         <ImFire className="nav-icon" />
                     </Link>
                 </li>
                 <li className="nav-item">
                     <Link to="/MoviePage" className="nav-btn">
-                        <Link className="nav-link">فیلم</Link>
+                        <span className="nav-link">فیلم</span>
                         <BiCameraMovie className="nav-icon" />
                     </Link>
                 </li>
                 <li className="nav-item">
                     <Link to="TvSeriesPage" className="nav-btn">
-                        <Link className="nav-link">سریال</Link>
+                        <span className="nav-link">سریال</span>
                         <MdMovie className="nav-icon" />
                     </Link>
                 </li>
                 <li className="nav-item">
                     <Link to="SearchPage" className="nav-btn">
-                        <Link className="nav-link">جستوجو</Link>
+                        <span className="nav-link">جستوجو</span>
                         <BiSearchAlt className="nav-icon" />
                     </Link>
                 </li>

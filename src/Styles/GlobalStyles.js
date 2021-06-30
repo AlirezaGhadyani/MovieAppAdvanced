@@ -20,17 +20,17 @@ body{
 
 .nav-link {
   color:${( { theme } ) => theme.textColor};
-  transition:color 0.4s linear;
 }
 
 .nav-icon {
   color:${( { theme } ) => theme.textColor};
-  transition:color 0.2s linear;
+  transition:color .4s ease;
 }
 
-.nav-item:hover .nav-icon,.nav-item:hover .nav-link{
-  color:${( { theme } ) => theme.primary};;
-  transition:color 0.2s linear;
+.nav-btn:focus .nav-icon{
+  color:${( { theme } ) => theme.primary};
+  transition:color .4s ease;
+}
 }
 
 `;

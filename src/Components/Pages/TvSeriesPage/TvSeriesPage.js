@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TrendingPage = () => {
+const TvSeriesPage = () => {
     return (
         <div>
 
@@ -8,4 +8,4 @@ const TrendingPage = () => {
     )
 }
 
-export default TrendingPage
+export default TvSeriesPage
