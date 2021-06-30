@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import TrendingCard from './TrendingCard';
+import { RiFolderWarningFill } from 'react-icons/ri';
 
 const TrendingPage = () => {
     const [TrendingData, setTrendingData] = useState( [] );
@@ -12,10 +14,24 @@ const TrendingPage = () => {
         fetchTrending()
     }, [] );
 
-    return (
-        <div className="Trending-wrapper">
+    console.log( TrendingData )
 
-        </div>
+    return (
+        <>
+            <div className="trending-title">
+                <h1>داغ ترین های روز</h1>
+            </div>
+            <div className="Trending-wrapper">
+                {
+                    TrendingData ? TrendingData.map( trendingMovie => (
+                        <TrendingCard trendingMovie={trendingMovie} key={trendingMovie.id} />
+                    ) ) : (
+                        <p className="t-message"><RiFolderWarningFill /> اطلاعات پیدا نشد</p>
+                    )
+                }
+            </div>
+        </>
+
     )
 }
 

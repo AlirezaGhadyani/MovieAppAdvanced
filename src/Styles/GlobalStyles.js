@@ -6,6 +6,15 @@ body{
   transition: all 0.5s linear;
 }
 
+*{
+  border-color: ${( { theme } ) => theme.textColorSec};
+}
+
+h1,h2,h3,h4,h5,h6,p,span{
+  color:${( { theme } ) => theme.textColor};
+  border-color: ${( { theme } ) => theme.textColorSec}!important;
+}
+
 .main-head{
   background: ${( { theme } ) => theme.bgSec};
 }
