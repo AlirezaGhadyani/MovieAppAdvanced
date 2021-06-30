@@ -1,1 +1,213 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+@font-face {
+  font-family: faFont;
+  src: url(../Assets/Fonts/Samim.ttf);
+}
+
+@font-face {
+  font-family: enFont;
+  src: url(../Assets/Fonts/Imprima.ttf);
+}
+
+@font-face {
+  font-family: logo;
+  src: url(../Assets/Fonts/Relate.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  list-style: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::after,
+::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 1.2rem;
+}
+
+body {
+  font-family: enFont, faFont;
+}
+
+.main-head {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 0;
+}
+
+.head-navbar {
+  width: 1366px;
+  max-width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.head-logo {
+  font-family: logo;
+  font-size: 1.8rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.theme-toggler {
+  opacity: 0;
+  position: absolute;
+}
+
+.theme-toggler-wrapper {
+  position: relative;
+  width: 75px;
+  height: 35px;
+  background: #000100;
+  border-radius: 30px;
+  padding: 5px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sun {
+  color: #f39c12;
+  font-size: 1.3rem;
+}
+
+.moon {
+  color: #f1c40f;
+  font-size: 1.3rem;
+}
+
+.inner-ball {
+  position: absolute;
+  left: 2px;
+  width: 32px;
+  height: 31px;
+  background: #ededed;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.theme-toggler:checked + .theme-toggler-wrapper {
+  background: #ffffff;
+}
+
+.theme-toggler:checked + .theme-toggler-wrapper .inner-ball {
+  -webkit-transform: translateX(35px);
+          transform: translateX(35px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  left: auto;
+  background: #3a3a3a;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-nav {
+  width: 500px;
+  max-width: 95%;
+  padding: 0.4rem 0.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-item .nav-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.nav-link {
+  font-family: faFont;
+  font-size: 0.9rem;
+}
+
+.nav-icon {
+  font-size: 2rem;
+}
+/*# sourceMappingURL=index.css.map */
