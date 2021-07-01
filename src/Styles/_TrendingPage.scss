@@ -8,7 +8,9 @@
   width: 1366px;
   max-width: 95%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  grid-gap: 1.4rem;
+  margin: 1rem 0 5rem 0;
 }
 
 .trending-title {
@@ -23,4 +25,94 @@
   font-size: 1.6rem;
   border-bottom: 2px solid;
   padding: 0 0 0.5rem 0;
+}
+
+.trending-card {
+  position: relative;
+  padding: 0.4rem;
+  margin: 0 0.6rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  @include flex(column, center, center);
+}
+
+.t-img-wrapper {
+  padding: 1rem;
+}
+
+.trending-card:hover .t-img {
+  filter: sepia(50%);
+  transition: filter 0.3s linear;
+}
+
+.t-img {
+  border-radius: 1rem;
+  transition: filter 0.3s linear;
+}
+
+.t-img-wrapper,
+.t-img,
+.t-year-type-wrapper,
+.t-name-wrapper {
+  width: 100%;
+}
+
+.t-name-wrapper {
+  padding: 0.6rem;
+  @include flex(column, center, center);
+}
+
+.t-year-type-wrapper {
+  padding: 0.6rem;
+  @include flex(row, space-between, center);
+}
+
+.t-name {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+.t-year-type {
+  margin: 1.4rem 0;
+}
+
+.t-year,
+.t-type {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.t-rate {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  @include flex(row, center, center);
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.pagination-wrapper {
+  width: 1366px;
+  max-width: 95%;
+  @include flex(row, center, center);
+  flex-wrap: wrap;
+  margin-bottom: 8rem;
+}
+
+.pagination-wrapper li {
+  font-size: 1.2rem;
+  margin: 0.5rem 0.25rem;
+  border-radius: 0.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  @include flex(row, center, center);
+}
+
+.pagination-prev-btn,
+.pagination-next-btn {
+  @include flex(row, center, center);
+  padding: 0.1rem;
 }

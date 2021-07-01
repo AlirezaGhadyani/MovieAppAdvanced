@@ -9,6 +9,7 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 ::after,
@@ -95,6 +96,7 @@ body {
   position: fixed;
   bottom: 0;
   @include flex(row, center, center);
+  z-index: 10000;
 }
 
 .navbar-nav {
@@ -105,10 +107,7 @@ body {
 }
 
 .nav-item .nav-btn {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  align-items: center;
+  @include flex(column-reverse, center, center);
   background: transparent;
   border: 0;
   cursor: pointer;
@@ -124,3 +123,5 @@ body {
 }
 
 @import "./TrendingPage";
+
+@import "./Responsive";
