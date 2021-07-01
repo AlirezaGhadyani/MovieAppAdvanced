@@ -6,7 +6,7 @@ const TopNavbar = ( { toggleTheme } ) => {
     return (
         <header className="main-head">
             <div className="head-navbar">
-                <h1 className="head-logo">MovieCenter</h1>
+                <h1><a href="#container" className="head-logo">MovieCenter</a></h1>
                 <div>
                     <input type="checkbox" className="theme-toggler" id="theme-toggler-name" onChange={toggleTheme} />
                     <label htmlFor="theme-toggler-name" className="theme-toggler-wrapper">

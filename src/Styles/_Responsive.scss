@@ -1,24 +1,24 @@
 @media (min-width: 531px) {
-  .trending-card {
+  .card {
     margin: 0;
     justify-content: space-between;
   }
 
-  .t-img-wrapper {
+  .img-wrapper {
     padding: 0.4rem;
   }
 
-  .t-name {
+  .card-name {
     font-size: 1.4rem;
   }
 
-  .t-year,
-  .t-type {
+  .card-year,
+  .card-type {
     font-size: 1rem;
     font-weight: 600;
   }
 
-  .t-rate {
+  .card-rate {
     top: 0.2rem;
     right: 0.2rem;
     font-size: 1rem;
@@ -27,21 +27,26 @@
   .pagination-wrapper li {
     font-size: 1.6rem;
     padding: 0.4rem;
-    margin: 0.5rem 0.25rem;
+    margin: 0.5rem 0.3rem;
     border-radius: 0.3rem;
     font-weight: 600;
     @include flex(row, center, center);
   }
-
-  .pagination-prev-btn,
-  .pagination-next-btn {
-    @include flex(row, center, center);
-    padding: 0.1rem;
-  }
 }
 
 @media (min-width: 1072px) {
-  .t-name-wrapper {
+  .card-name-wrapper {
     padding: 0 0.6rem;
+  }
+}
+
+@media (max-width: 531px) {
+  .pagination-wrapper li {
+    font-size: 1.4rem;
+    padding: 0.2rem;
+    margin: 0.5rem 0.2rem;
+    border-radius: 0.3rem;
+    font-weight: 700;
+    @include flex(row, center, center);
   }
 }

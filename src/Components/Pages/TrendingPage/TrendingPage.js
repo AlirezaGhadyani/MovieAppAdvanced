@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import TrendingCard from './TrendingCard';
+import Card from '../../Global/Card';
 import { RiFolderWarningFill } from 'react-icons/ri';
 import ReactPaginate from 'react-paginate';
-import { GrFormNext, GrFormPrevious } from 'react-icons/gr'
 
 const TrendingPage = () => {
     const [TrendingData, setTrendingData] = useState( [] );
@@ -35,10 +34,10 @@ const TrendingPage = () => {
             <div className="trending-title">
                 <h1>داغ ترین های روز</h1>
             </div>
-            <div className="Trending-wrapper">
+            <div className="card-wrapper">
                 {
                     TrendingData ? TrendingData.map( trendingMovie => (
-                        <TrendingCard trendingMovie={trendingMovie} key={trendingMovie.id} />
+                        <Card Data={trendingMovie} key={trendingMovie.id} />
                     ) ) : (
                         <p className="t-message"><RiFolderWarningFill /> اطلاعات پیدا نشد</p>
                     )
@@ -48,12 +47,12 @@ const TrendingPage = () => {
             <ReactPaginate
                 pageCount={totalPage}
                 pageRangeDisplayed={2}
-                nextLabel={<GrFormNext />}
-                previousLabel={<GrFormPrevious />}
                 onPageChange={pageChange}
+                previousLabel={''}
+                nextLabel={''}
+                previousClassName="paginate-p"
+                nextClassName="paginate-n"
                 containerClassName="pagination-wrapper"
-                previousLinkClassName="pagination-prev-btn"
-                nextLinkClassName="pagination-next-btn"
                 disabledClassName="disable-pagination"
                 activeClassName="active-pagination" />
         </>

@@ -27,9 +27,12 @@ body {
 }
 
 .main-head {
+  position: fixed;
+  top: 0;
   width: 100%;
   @include flex(row, center, center);
   padding: 0.5rem 0;
+  z-index: 10000;
 }
 
 .head-navbar {
@@ -122,6 +125,6 @@ body {
   font-size: 2rem;
 }
 
-@import "./TrendingPage";
+@import "./Pages";
 
 @import "./Responsive";

@@ -42,7 +42,7 @@ function App() {
   return (
     <Router>
       <ThemeProvider theme={themeMode}>
-        <Container>
+        <Container id="container">
           <GlobalStyles />
           <TopNavbar toggleTheme={toggleTheme} />
           <BottomNavbar />

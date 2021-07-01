@@ -4,19 +4,19 @@
   margin-top: 10rem;
 }
 
-.Trending-wrapper {
+.card-wrapper {
   width: 1366px;
   max-width: 95%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
   grid-gap: 1.4rem;
-  margin: 1rem 0 5rem 0;
+  margin: 2rem 0;
 }
 
 .trending-title {
   width: 1366px;
   max-width: 90%;
-  margin: 1rem 0;
+  margin: 5rem 0 0 0;
   text-align: center;
 }
 
@@ -27,7 +27,7 @@
   padding: 0 0 0.5rem 0;
 }
 
-.trending-card {
+.card {
   position: relative;
   padding: 0.4rem;
   margin: 0 0.6rem;
@@ -36,54 +36,50 @@
   @include flex(column, center, center);
 }
 
-.t-img-wrapper {
+.img-wrapper {
   padding: 1rem;
 }
 
-.trending-card:hover .t-img {
+.card:hover .card-img {
   filter: sepia(50%);
   transition: filter 0.3s linear;
 }
 
-.t-img {
+.card-img {
   border-radius: 1rem;
   transition: filter 0.3s linear;
 }
 
-.t-img-wrapper,
-.t-img,
-.t-year-type-wrapper,
-.t-name-wrapper {
+.img-wrapper,
+.card-img,
+.card-year-type-wrapper,
+.card-name-wrapper {
   width: 100%;
 }
 
-.t-name-wrapper {
+.card-name-wrapper {
   padding: 0.6rem;
   @include flex(column, center, center);
 }
 
-.t-year-type-wrapper {
+.card-year-type-wrapper {
   padding: 0.6rem;
   @include flex(row, space-between, center);
 }
 
-.t-name {
+.card-name {
   font-size: 2rem;
   text-align: center;
   font-weight: 900;
 }
 
-.t-year-type {
-  margin: 1.4rem 0;
-}
-
-.t-year,
-.t-type {
+.card-year,
+.card-type {
   font-size: 1.4rem;
   font-weight: 600;
 }
 
-.t-rate {
+.card-rate {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
@@ -102,17 +98,15 @@
   margin-bottom: 8rem;
 }
 
-.pagination-wrapper li {
-  font-size: 1.2rem;
-  margin: 0.5rem 0.25rem;
-  border-radius: 0.3rem;
-  font-weight: 600;
-  cursor: pointer;
-  @include flex(row, center, center);
+.paginate-p,
+.paginate-n {
+  display: none !important;
 }
 
-.pagination-prev-btn,
-.pagination-next-btn {
-  @include flex(row, center, center);
-  padding: 0.1rem;
+.select {
+  width: 1366px;
+  max-width: 95%;
+  margin-top: 5rem;
+  direction: rtl;
+  font-size: 1.4rem;
 }

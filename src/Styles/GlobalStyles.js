@@ -40,54 +40,34 @@ h1,h2,h3,h4,h5,h6,p,span{
   color:${( { theme } ) => theme.primary};
   transition:color .4s ease;
 }
-}
 
-.trending-card{
+.card{
   background:${( { theme } ) => theme.bgSec};
 }
 
-.t-year,
-.t-type {
+.card-year,
+.card-type {
   color:${( { theme } ) => theme.textColorSec};
 }
 
-.t-rate{
+.card-rate{
   background:${( { theme } ) => theme.primary};
   color: ${( { theme } ) => theme.bgSec};
 }
 
 .pagination-wrapper li{
   color:${( { theme } ) => theme.textColorSec};
-}
-
-.pagination-prev-btn,
-.pagination-next-btn{
-  color:${( { theme } ) => theme.textColor};
-}
-
-.active-pagination{
-  background:${( { theme } ) => theme.textColor};
-  padding:.2rem .4rem;
-  color:${( { theme } ) => theme.bg}!important;
-}
-
-@media (min-width: 531px){
-  .pagination-wrapper li {
   background:${( { theme } ) => theme.bgSec};
 }
 
-.pagination-prev-btn,
-.pagination-next-btn {
-  @include flex(row, center, center);
-  padding: 0.1rem;
-}
-
 .active-pagination{
-  background:${( { theme } ) => theme.textColor};
-  padding:.2rem .4rem;
-  color:${( { theme } ) => theme.primary}!important;
+  color: ${( { theme } ) => theme.primary}!important;
+  padding: 0.4rem 0.6rem!important;
 }
 
+.select{
+  background: ${( { theme } ) => theme.bgSec};
+  color: ${( { theme } ) => theme.textColor};
 }
 
 `;
