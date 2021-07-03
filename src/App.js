@@ -45,13 +45,13 @@ function App() {
         <Container id="container">
           <GlobalStyles />
           <TopNavbar toggleTheme={toggleTheme} />
-          <BottomNavbar />
           <Switch>
-            <Route path="/" exact component={TrendingPage} />
-            <Route path="/" component={MoviePage} />
-            <Route path="/" component={TvSeriesPage} />
-            <Route path="/" component={SearchPage} />
+            <Route exact path="/" component={TrendingPage} />
+            <Route path="/MoviePage" component={MoviePage} />
+            <Route path="/TvSeriesPage" component={TvSeriesPage} />
+            <Route path="/SearchPage" component={SearchPage} />
           </Switch>
+          <BottomNavbar />
         </Container>
       </ThemeProvider>
     </Router>

@@ -70,6 +70,16 @@ h1,h2,h3,h4,h5,h6,p,span{
   color: ${( { theme } ) => theme.textColor};
 }
 
+.search-inp{
+  background: ${( { theme } ) => theme.bgSec};
+  color: ${( { theme } ) => theme.textColor};
+}
+
+.search-inp:focus{
+  border:2px solid ${( { theme } ) => theme.primary};
+  transition: border 0.3s linear;
+}
+
 `;
 
 export const lightTheme = {

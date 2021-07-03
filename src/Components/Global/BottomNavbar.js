@@ -21,13 +21,13 @@ const BottomNavbar = () => {
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="TvSeriesPage" className="nav-btn">
+                    <Link to="/TvSeriesPage" className="nav-btn">
                         <span className="nav-link">سریال</span>
                         <MdMovie className="nav-icon" />
                     </Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="SearchPage" className="nav-btn">
+                    <Link to="/SearchPage" className="nav-btn">
                         <span className="nav-link">جستوجو</span>
                         <BiSearchAlt className="nav-icon" />
                     </Link>

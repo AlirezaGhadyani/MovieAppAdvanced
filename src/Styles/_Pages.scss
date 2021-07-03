@@ -88,6 +88,7 @@
   @include flex(row, center, center);
   border-radius: 50%;
   padding: 0.5rem;
+  cursor: pointer;
 }
 
 .pagination-wrapper {
@@ -98,15 +99,43 @@
   margin-bottom: 8rem;
 }
 
+.pagination-wrapper li {
+  cursor: pointer;
+}
+
 .paginate-p,
 .paginate-n {
   display: none !important;
 }
 
-.select {
+.genre-wrapper {
   width: 1366px;
   max-width: 95%;
-  margin-top: 5rem;
-  direction: rtl;
   font-size: 1.4rem;
+  direction: rtl;
+  margin-top: 5rem;
+}
+
+.search-box-wrapper {
+  margin-top: 5rem;
+  width: 1366px;
+  max-width: 95%;
+}
+
+.search-inp {
+  width: 100%;
+  font-family: enFont;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 0.4rem 0.8rem;
+  border: 2px solid transparent;
+  border-radius: 0.4rem;
+  transition: border 0.3s linear;
+}
+
+.search-inp::placeholder {
+  font-family: faTitle;
+  direction: rtl;
+  text-align: right;
+  font-weight: 600;
 }
