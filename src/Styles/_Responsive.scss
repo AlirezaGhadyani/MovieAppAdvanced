@@ -38,6 +38,56 @@
   .card-name-wrapper {
     padding: 0 0.6rem;
   }
+
+  .land-modal-img {
+    display: none;
+  }
+
+  .modal-img {
+    width: 40%;
+  }
+
+  .portrait-modal-img {
+    width: 12rem;
+    display: flex;
+    border-radius: 0.6rem;
+  }
+
+  .image-info-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+
+  .modal-info {
+    margin-top: 2rem;
+  }
+
+  .status-budget {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .modal-name {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .modal-status,
+  .modal-budget {
+    font-size: 1.4rem;
+  }
+
+  .modal-desc {
+    padding: 0 5rem;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    font-weight: 100;
+  }
 }
 
 @media (max-width: 531px) {

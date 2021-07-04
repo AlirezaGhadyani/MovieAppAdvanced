@@ -1,0 +1,131 @@
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000085;
+  z-index: 100000;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+.data-wrapper {
+  width: 1024px;
+  max-width: 95%;
+  height: 70vh;
+  background-color: #fff;
+  border-radius: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+  z-index: 100;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+
+.image-info-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-img {
+  width: 100%;
+  padding: 0.6rem;
+}
+
+.portrait-modal-img {
+  display: none;
+}
+
+.land-modal-img {
+  width: 100%;
+  border-radius: 0.6rem;
+}
+
+.modal-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-name {
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.modal-status,
+.modal-budget {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.modal-desc {
+  text-align: center;
+  padding: 0.6rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.youtube-btn {
+  width: 1024px;
+  max-width: 95%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background: #cc0000;
+  color: #ffffff;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+  margin: 1rem 0 0.4rem 0;
+  font-weight: 900;
+}
+
+.youtube-icon {
+  margin: 0 0.6rem;
+  font-size: 1.8rem;
+}
+
+.modal-carousel {
+  width: 1366px;
+  max-width: 95%;
+  direction: ltr;
+  margin: 2rem 0;
+}
+
+.crew-item {
+  width: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.crew-img {
+  width: 100%;
+  padding: 0.4rem;
+  border-radius: 0.8rem;
+}
+
+.crew-name {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+}

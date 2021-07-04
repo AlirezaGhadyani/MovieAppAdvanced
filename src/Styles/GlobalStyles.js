@@ -55,6 +55,11 @@ h1,h2,h3,h4,h5,h6,p,span{
   color: ${( { theme } ) => theme.bgSec};
 }
 
+.lesssix{
+  background:${( { theme } ) => theme.primary2};
+  color: ${( { theme } ) => theme.textColor};
+}
+
 .pagination-wrapper li{
   color:${( { theme } ) => theme.textColorSec};
   background:${( { theme } ) => theme.bgSec};
@@ -80,6 +85,15 @@ h1,h2,h3,h4,h5,h6,p,span{
   transition: border 0.3s linear;
 }
 
+.data-wrapper {
+  background: ${( { theme } ) => theme.bgSec};
+  color: ${( { theme } ) => theme.textColor};
+}
+
+.times-btn {
+  color: ${( { theme } ) => theme.bgSec};
+}
+
 `;
 
 export const lightTheme = {
@@ -87,7 +101,8 @@ export const lightTheme = {
   textColor: '#000100',
   bgSec: '#ededed',
   textColorSec: '#6d6d6f',
-  primary: '#8be7bb'
+  primary: '#2ec4b6',
+  primary2: '#e63946'
 };
 
 export const darkTheme = {
@@ -95,5 +110,6 @@ export const darkTheme = {
   textColor: '#ffffff',
   bgSec: '#3a3a3a',
   textColorSec: '#d7d7d7',
-  primary: '#8be7bb'
+  primary: '#2ec4b6',
+  primary2: '#e63946'
 };
