@@ -65,8 +65,8 @@ const Modal = ( { showModal, setShowModal, CardData } ) => {
                                     `${mediaData.title || mediaData.original_name} ( ${firstAirDate || releaseDate} )`
                                 }</span>
                                 <div className="status-budget">
-                                    <h4 className="modal-status">{mediaData.status === 'Released' ? 'وضعیت : منتشر شده' : 'وضعیت : منتشر نشده'}</h4>
-                                    <h4 className="modal-budget">{mediaData.budget === 0 ? 'بودجه : اعلام نشده' : `بودجه : ${mediaData.budget}`}</h4>
+                                    <h4 className="modal-status">{mediaData.status && mediaData.status === 'Released' ? 'وضعیت : منتشر شده' : 'وضعیت : منتشر نشده'}</h4>
+                                    <h4 className="modal-budget">{mediaData.budget && mediaData.budget === 0 ? 'بودجه : اعلام نشده' : `بودجه : ${mediaData.budget}`}</h4>
                                 </div>
                                 {mediaData.overview && (
                                     <p className="modal-desc">

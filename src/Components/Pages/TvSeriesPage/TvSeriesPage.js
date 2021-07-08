@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { RiFolderWarningFill } from 'react-icons/ri';
+import { AiOutlineWarning } from 'react-icons/ai';
 import Card from '../../Global/Card';
 import ReactPaginate from 'react-paginate';
 import Genres from '../../Global/Genres';
@@ -7,6 +7,7 @@ import { useGenre } from '../../Global/useGenre';
 
 const TvSeriesPage = () => {
     const [tvSeriesData, setTvSeriesData] = useState( [] );
+    const [dataStatus, setDataStatus] = useState( false );
     const [totalPages, setTotalPages] = useState();
     const [pageNum, setPageNum] = useState( 1 );
     // State for Genres
@@ -21,8 +22,10 @@ const TvSeriesPage = () => {
             const data = await response.json();
             setTvSeriesData( data.results );
             setTotalPages( data.total_pages );
+            setDataStatus( true );
         } catch ( error ) {
             console.log( error );
+            setDataStatus( false );
         }
     }
 
@@ -48,11 +51,15 @@ const TvSeriesPage = () => {
                 setSelectedGenres={setSelectedGenres} />
 
             <div className="card-wrapper">
-                {tvSeriesData ? tvSeriesData.map( tvShow => (
+                {tvSeriesData && tvSeriesData.map( tvShow => (
                     <Card Data={tvShow} key={tvShow.id} />
-                ) ) : (
-                    <p className="t-message"><RiFolderWarningFill /> اطلاعات پیدا نشد</p>
-                )}
+                ) )}
+
+                {
+                    !dataStatus && (
+                        <p className="t-message"><AiOutlineWarning /> مشکل در دریافت اطلاعات<AiOutlineWarning /></p>
+                    )
+                }
             </div>
 
             <ReactPaginate

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Card from '../../Global/Card';
-import { RiFolderWarningFill } from 'react-icons/ri';
+import { AiOutlineWarning } from 'react-icons/ai';
 import ReactPaginate from 'react-paginate';
 import Genres from '../../Global/Genres';
 import { useGenre } from '../../Global/useGenre';
 
 const MoviePage = () => {
     const [moviesData, setMovieData] = useState( [] );
+    const [dataStatus, setDataStatus] = useState( false );
     const [pageNum, setPageNum] = useState( 1 );
     const [totalPages, setTotalPage] = useState( 0 );
     // State for Genres
@@ -21,8 +22,10 @@ const MoviePage = () => {
             const data = await response.json();
             setMovieData( data.results );
             setTotalPage( data.total_pages );
+            setDataStatus( true );
         } catch ( error ) {
             console.log( error );
+            setDataStatus( false );
         }
     }
 
@@ -50,12 +53,16 @@ const MoviePage = () => {
                 setSelectedGenres={setSelectedGenres} />
 
             <div className="card-wrapper">
-                {moviesData ?
+                {moviesData &&
                     moviesData.map( movieData => (
                         <Card Data={movieData} key={movieData.id} />
-                    ) ) : (
-                        <p className="t-message"><RiFolderWarningFill /> اطلاعات پیدا نشد</p>
-                    )}
+                    ) )}
+
+                {
+                    !dataStatus && (
+                        <p className="t-message"><AiOutlineWarning /> مشکل در دریافت اطلاعات<AiOutlineWarning /></p>
+                    )
+                }
             </div>
 
             <ReactPaginate
